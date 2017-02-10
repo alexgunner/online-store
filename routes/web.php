@@ -26,3 +26,5 @@ Route::get('/callback', 'SocialAuthController@callback');
 Route::get('products', ['uses' => 'ProductsController@show']);
 
 Route::post('products', ['uses' => 'ProductsController@store']);
+
+Route::get('listprod', ['uses' => 'ProductsController@showlist']);
