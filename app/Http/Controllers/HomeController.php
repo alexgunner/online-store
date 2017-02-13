@@ -25,4 +25,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function products_template()
+    {
+        return view('products_template');
+    }
+
 }

@@ -22,6 +22,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
 
+Route::get('/products_template', 'HomeController@products_template');
+
 //products routes
 Route::get('products', ['uses' => 'ProductsController@show']);
 
