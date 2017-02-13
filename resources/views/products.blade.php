@@ -27,7 +27,12 @@
   <input id="description" type="text" name="description">
   <br/>
   <label>Lugar:</label>
-  <input id="location" type="text" name="location">
+  <select name="location" id="location">
+    <option value="la paz">La Paz</option>
+    <option value="santa cruz">Santa Cruz</option>
+    <option value="cochabamba">Cochabamba</option>
+    <option value="sucre">Sucre</option>
+  </select>
   <br/>
   <label >Imagen:</label>
    <input type="file" name="file" id="file">

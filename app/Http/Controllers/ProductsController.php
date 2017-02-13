@@ -3,16 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use \Input as Input;
 use App\Products;
+
 class ProductsController extends Controller
 {
 
-    public function show()
+    public function showlist()
     {
-        return view('products');
+
+        $products = DB::table('profile')->paginate(1);
+
+
+        return view('listproducts',['products' => $products]);
     }
 
+
+    public function show()
+    {
+
+      return view('products');
+    }
     public function store(Request $request)
     {
         //echo "UPLOADED";

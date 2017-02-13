@@ -28,3 +28,5 @@ Route::get('/products_template', 'HomeController@products_template');
 Route::get('products', ['uses' => 'ProductsController@show']);
 
 Route::post('products', ['uses' => 'ProductsController@store']);
+
+Route::get('listprod', ['uses' => 'ProductsController@showlist']);
