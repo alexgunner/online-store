@@ -14,12 +14,12 @@ class Products extends Model
       'price',
       'saleby',
       'description',
-      'Location',
+      'location',
       'image'
     ];
 
     public $timestamps = false;
 
 
-    //protected $table = ''; //replace with table name
+    protected $table = 'products'; //replace with table name
 }

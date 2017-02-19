@@ -13,7 +13,7 @@ class CreateProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email');
@@ -21,7 +21,7 @@ class CreateProfileTable extends Migration
             $table->string('saleby');
             $table->string('price');
             $table->string('description');
-            $table->string('Location');
+            $table->string('location');
             $table->string('image');
             $table->rememberToken();
             $table->timestamps();
@@ -35,6 +35,6 @@ class CreateProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile');
+        Schema::dropIfExists('products');
     }
 }

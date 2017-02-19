@@ -13,7 +13,7 @@ class ProductsController extends Controller
     public function showlist()
     {
 
-        $products = DB::table('profile')->paginate(1);
+        $products = DB::table('products')->paginate(1);
 
 
         return view('listproducts',['products' => $products]);
@@ -47,7 +47,7 @@ class ProductsController extends Controller
                 'saleby' => $request->saleby,
                 'price' => $request->price,
                 'description' => $request->description,
-                'Location' => $request->location,
+                'location' => $request->location,
                'image' => $filename,
            ]);
 

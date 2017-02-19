@@ -30,3 +30,8 @@ Route::get('products', ['uses' => 'ProductsController@show']);
 Route::post('products', ['uses' => 'ProductsController@store']);
 
 Route::get('listprod', ['uses' => 'ProductsController@showlist']);
+
+//Messages
+//Route::get('messages', ['uses' => 'MessagesController@show']);
+
+Route::post('messages', ['uses' => 'MessagesController@store']);
