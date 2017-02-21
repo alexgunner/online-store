@@ -55,4 +55,9 @@ class ProductsController extends Controller
 
        return View('display', ['product' => $product]);
     }
+
+    public function showprofile()
+    {
+        return view('profile');
+    }
 }
