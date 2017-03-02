@@ -22,6 +22,8 @@
 
   <div>
     <form method="post" action="{{ URL::to('messages')}}" enctype="multipart/form-data">
+    	
+    	<input type="text" name="senderemail" value="Email">
 	  	<textarea rows="4" cols="40" name="msg" id="msg">
 	  		Escribe tu mensaje aqui...
 	  	</textarea>
