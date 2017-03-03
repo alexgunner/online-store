@@ -7,11 +7,11 @@
 <script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Markito Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+<meta name="keywords" content="Markito Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
@@ -21,7 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 					jQuery(document).ready(function($) {
-						$(".scroll").click(function(event){		
+						$(".scroll").click(function(event){
 							event.preventDefault();
 							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 						});
@@ -36,18 +36,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<div class="header" >
-	<div class="top-header" >		
+	<div class="top-header" >
 		<div class="container">
 		<div class="top-head" >
 			<div class="header-para">
 				<ul class="social-in">
-					<li><a href="#"><i> </i></a></li>						
+					<li><a href="#"><i> </i></a></li>
 					<li><a href="#"><i class="ic"> </i></a></li>
 					<li><a href="#"><i class="ic1"> </i></a></li>
-					
-				</ul>			
-			</div>	
-			
+
+				</ul>
+			</div>
+
 			<ul class="header-in">
 				<li ><a href="/products_template.html" >  brands</a></li>
 				<li><a href="404.html">about us</a> </li>
@@ -79,6 +79,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 
-	 <p> </p> 
+	 <p> </p>
+	 <div class="container">
+		 {{ Auth::user()->name }}
+	 </div>
 	 </body>
 </html>
