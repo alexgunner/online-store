@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use \Input as Input;
 use App\Products;
 
@@ -58,6 +59,19 @@ class ProductsController extends Controller
 
     public function showprofile()
     {
-        return view('profile');
+
+        if (Auth::check()) 
+        {
+          // The user is logged in...
+
+          $user = DB::table('products')->where('email', Auth::user()->email)->get();
+        
+          return view('profile',['user' => $user]);
+        
+        }
+        else
+        {
+          return view('auth.login');
+        }
     }
 }
