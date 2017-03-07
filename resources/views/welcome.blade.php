@@ -317,7 +317,6 @@
 
             <div class="banner">
         <div class="container">
-          {{ Auth::user()->name }}
                   <div class="wmuSlider example1">
                        <div class="wmuSliderWrapper">
                      <article style="position: absolute; width: 100%; opacity: 0;">
