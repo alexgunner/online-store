@@ -28,7 +28,21 @@ class ProductsController extends Controller
     }
     public function store(Request $request)
     {
+        
+        $this->validate(request(), [
+            'name' => 'required|max:40',
+            'email' => 'required|max:40',
+            'title' => 'required|max:50',
+            'saleby' => 'required|numeric',
+            'price' => 'required',
+            'description' => 'required',
+            'location' => 'required',
+            'image' => 'required|image',
+
+        ]);
+
         //echo "UPLOADED";
+
        if(Input::hasFile('file')){
           $file = Input::file('file');
           $file->move('uploads', $file->getClientOriginalName());
