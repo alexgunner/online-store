@@ -1,4 +1,3 @@
-
 <html>
 <head>
   <title>Nuevo Producto</title>
@@ -8,6 +7,7 @@
 
 
 <form method="post" action="{{ URL::to('products')}}" enctype="multipart/form-data">
+  
   <label>Nombre:</label>
   <input id="getname" type="text" name="name">
   <br/>
@@ -34,9 +34,11 @@
     <option value="sucre">Sucre</option>
   </select>
   <br/>
+
   <label >Imagen:</label>
-   <input type="file" name="file" id="file">
+   <input type="file" name="img" id="img">
    <br/>
+   
   <input type="submit" value="Save" name="submit">
   <input type="hidden" value="{{ csrf_token() }}" name="_token">
 </form>

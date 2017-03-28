@@ -26,6 +26,7 @@ class ProductsController extends Controller
 
       return view('products');
     }
+
     public function store(Request $request)
     {
         
@@ -33,18 +34,19 @@ class ProductsController extends Controller
             'name' => 'required|max:40',
             'email' => 'required|max:40',
             'title' => 'required|max:50',
-            'saleby' => 'required|numeric',
-            'price' => 'required',
+            'saleby' => 'required',
+            'price' => 'required|numeric',
             'description' => 'required',
-            'location' => 'required',
-            'image' => 'required|image',
+            'location' => 'required', 
+            'file' => 'image'
 
         ]);
 
         //echo "UPLOADED";
 
-       if(Input::hasFile('file')){
-          $file = Input::file('file');
+       if(Input::hasFile('img')){
+          echo 'asdasd';
+          $file = Input::file('img');
           $file->move('uploads', $file->getClientOriginalName());
 
           //$destinationPath = public_path(). '/uploads/';
@@ -52,7 +54,7 @@ class ProductsController extends Controller
           $filename = $file->getClientOriginalName();
           //$file->move($destinationPath, $filename);
 
-          //echo  $filename;
+          echo  $filename;
            //echo '<img src="uploads/'. $filename . '"/>';
 
            $product = Products::create([
@@ -63,10 +65,10 @@ class ProductsController extends Controller
                 'price' => $request->price,
                 'description' => $request->description,
                 'location' => $request->location,
-               'image' => $filename,
+                'image' => $filename,
            ]);
 
-       }
+        }
 
        return View('display', ['product' => $product]);
     }

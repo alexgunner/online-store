@@ -60,10 +60,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <input type="submit" value="" >
                     </form>
                 </div>
-                <div class="world">
-                    <ul >
+            </div>
+                <div>
+                    <ul>
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/login') }}">Login</a></li> 
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                         <li><a href="#"><span> </span></a> </li>
@@ -90,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
-            </div>
+            
                 <div class="clearfix"> </div>
         </div>
         </div>
