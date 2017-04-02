@@ -25,7 +25,14 @@ Route::get('/callback', 'SocialAuthController@callback');
 Route::get('/products_template', 'HomeController@products_template');
 
 //products routes
-Route::get('products', ['uses' => 'ProductsController@show']);
+//Route::get('products', ['uses' => 'ProductsController@show']);
+Route::get('products', function(){
+		if (Auth::guest()) {
+			return View::make('auth/login');
+		}
+
+		return View::make('products');
+});
 
 Route::post('products', ['uses' => 'ProductsController@store']);
 
