@@ -31,6 +31,8 @@ Route::post('products', ['uses' => 'ProductsController@store']);
 
 Route::get('listprod', ['uses' => 'ProductsController@showlist']);
 
+Route::get('contacto', ['uses' => 'HomeController@contact']);
+
 //Messages
 //Route::get('messages', ['uses' => 'MessagesController@show']);
 

@@ -100,7 +100,7 @@
                 <div class="container">
                 <div class="head-top">
                     <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt="" ></a>
+                        <a href="/"><img src="images/logo.png" alt="" ></a>
                     </div>
                 <div class="top-nav">
                       <ul class="megamenu skyblue">
@@ -250,7 +250,7 @@
                                  <li class="grid"><a  href="health.html">health & beauty</a>
 
                         </li>
-                        <li><a  href="#">tvs, gaming & cameras</a>
+                        <li><a  href="/contacto">Contacto</a>
                           <div class="megapanel">
                                 <div class="row">
                                     <div class="col1">
@@ -929,7 +929,7 @@
             <div class="footer">
                 <div class="container">
                     <div class="col-md-3 footer-left">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        <a href="/"><img src="images/logo.png" alt=""></a>
                         <p class="footer-class">© 2015 Markito All Rights Reserved | Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
                     </div>
                     <div class="col-md-2 footer-middle">

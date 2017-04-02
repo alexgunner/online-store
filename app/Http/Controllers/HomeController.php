@@ -31,6 +31,11 @@ class HomeController extends Controller
         return view('products_template');
     }
 
-    
+    public function contact()
+    {
+      return view('contact');
+    }
+
+
 
 }
