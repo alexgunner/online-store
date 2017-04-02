@@ -1,3 +1,8 @@
+@if (Auth::guest())
+  <script type="text/javascript">
+    window.location = "{ url('/login') }";//here double curly bracket
+  </script>
+@else
 <html>
 <head>
   <title>Nuevo Producto</title>
@@ -57,3 +62,4 @@
 </div>
 </body>
 </html>
+@endif
