@@ -15,8 +15,9 @@ class CreateProfileTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email');
+            //$table->string('name');
+            //$table->string('email');
+            $table->string('category');
             $table->string('title');
             $table->string('saleby');
             $table->string('price');

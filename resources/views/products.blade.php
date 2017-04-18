@@ -1,8 +1,3 @@
-@if (Auth::guest())
-  <script type="text/javascript">
-    window.location = "{ url('/login') }";//here double curly bracket
-  </script>
-@else
 <html>
 <head>
   <title>Nuevo Producto</title>
@@ -13,17 +8,29 @@
 
 <form method="post" action="{{ URL::to('products')}}" enctype="multipart/form-data">
   
-  <label>Nombre:</label>
+  <!-- <label>Nombre:</label>
   <input id="getname" type="text" name="name">
   <br/>
   <label>Email:</label>
   <input id="email" type="email" name="email">
+  <br/> -->
+  <label>Categoria</label>
+  <select name="category" id="category">
+    <option value="Autos">Volvo</option>
+    <option value="Electronicos">Saab</option>
+    <option value="Ropa">Fiat</option>
+    <option value="Instrumentos Musicales">Audi</option>
+  </select>
+
   <br/>
+
   <label>Titulo:</label>
   <input id="title" type="text" name="title">
   <br/>
+  
   <label>Vendido Por:</label>
-  <input id="saleby" type="text" name="saleby">
+    <input type="radio" name="saleby" value="Dueno" checked> Dueno<br/>
+    <input type="radio" name="saleby" value="Negocio"> Negocio<br/>
   <br/>
   <label>Precio:</label>
   <input id="getname" type="text" name="price">
@@ -62,4 +69,3 @@
 </div>
 </body>
 </html>
-@endif

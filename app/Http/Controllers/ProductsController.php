@@ -30,9 +30,9 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         
-        $this->validate(request(), [
-            'name' => 'required|max:40',
-            'email' => 'required|max:40',
+        $this->validate(request(), 
+        [
+            'category' => 'required|max:40',
             'title' => 'required|max:50',
             'saleby' => 'required',
             'price' => 'required|numeric',
@@ -45,7 +45,7 @@ class ProductsController extends Controller
         //echo "UPLOADED";
 
        if(Input::hasFile('img')){
-          echo 'asdasd';
+          //echo 'asdasd';
           $file = Input::file('img');
           $file->move('uploads', $file->getClientOriginalName());
 
@@ -53,13 +53,12 @@ class ProductsController extends Controller
           //$filename = public_path() . '\uploads\\' . $file->getClientOriginalName();
           $filename = $file->getClientOriginalName();
           //$file->move($destinationPath, $filename);
-
-          echo  $filename;
+          //echo $request->category;
+          //echo  $filename;
            //echo '<img src="uploads/'. $filename . '"/>';
 
            $product = Products::create([
-                'name' => $request->name,
-                'email' => $request->email,
+                'category' => $request->category,
                 'title' => $request->title,
                 'saleby' => $request->saleby,
                 'price' => $request->price,
@@ -67,6 +66,18 @@ class ProductsController extends Controller
                 'location' => $request->location,
                 'image' => $filename,
            ]);
+
+           //$prod_id = DB::select('select id from products order by id desc limit 1');
+           $prod = DB::table('products')->orderBy('id','desc')->first();
+           $user_id = Auth::user()->id;
+
+           //echo $user_id;
+           //var_dump($prod_id);
+           $prod_id = $prod->id;
+
+           //DB::insert('insert into user_product(user_id, product_id) values ($user_id, $prod_id');
+           DB::table('user_product')->insert([
+              'user_id' => $user_id, 'product_id' => $prod_id]);
 
         }
 
