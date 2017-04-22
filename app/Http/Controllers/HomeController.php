@@ -36,6 +36,11 @@ class HomeController extends Controller
       return view('contact');
     }
 
+    public function admin()
+    {
+        return view('admin');
+    }
+
 
 
 }

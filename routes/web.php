@@ -40,6 +40,8 @@ Route::get('listprod', ['uses' => 'ProductsController@showlist']);
 
 Route::get('contacto', ['uses' => 'HomeController@contact']);
 
+Route::get('admin', ['uses' => 'HomeController@admin']);
+
 //Messages
 //Route::get('messages', ['uses' => 'MessagesController@show']);
 
