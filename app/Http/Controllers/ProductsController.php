@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use \Input as Input;
 use App\Products;
+use App\Redirect;
 
 class ProductsController extends Controller
 {
@@ -100,5 +101,21 @@ class ProductsController extends Controller
         {
           return view('auth.login');
         }
+    }
+
+    public function searchproduct(Request $request)
+    {
+
+      $search = Input::get('search');
+      //$search = $request->search;
+      echo $search;
+      if(empty($search)){
+          return redirect('/')->with('message','Ingresa una palabra en tu busqueda');
+      }
+      $products = Products::where('title', 'LIKE','%'.$search.'%')->paginate(4);
+
+
+      return view('results',['products' => $products]);
+
     }
 }
