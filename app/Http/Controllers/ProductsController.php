@@ -107,15 +107,16 @@ class ProductsController extends Controller
     {
 
       $search = Input::get('search');
+      //$flag = 0;
       //$search = $request->search;
-      echo $search;
-      if(empty($search)){
-          return redirect('/')->with('message','Ingresa una palabra en tu busqueda');
-      }
+      //echo $search;
+      //if(empty($search) && $flag == 0){
+        //  return redirect('/')->with('message','Ingresa una palabra en tu busqueda');
+      //}
       $products = Products::where('title', 'LIKE','%'.$search.'%')->paginate(4);
+      //$flag=1;
 
-
-      return view('results',['products' => $products]);
+      return view('results',compact('products','p'));
 
     }
 }
