@@ -1,6 +1,6 @@
 <html>
 	<head>
-  		<title>NMensajes</title>
+  		<title>Mensajes</title>
 	</head>
 	<body>
 	<p>{{ $message->message }}</p>
