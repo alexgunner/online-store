@@ -72,9 +72,10 @@
                     </ul>
                     <div class="search-top">
                         <div class="search">
-                            <form>
-                                <input type="text" value="search about something ?" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'search about something ?';}" >
-                                <input type="submit" value="" >
+                            <form  method="GET" action="{{ URL::to('search')}}" enctype="multipart/form-data">
+                                <input type="text" name="search" id="search" value="search about something ?" onfocus="this.value = '';" >
+                                <input type="submit" value="">
+                                <input type="hidden" value="{{ csrf_token() }}" name="_token">
                             </form>
                         </div>
                         <div class="world">

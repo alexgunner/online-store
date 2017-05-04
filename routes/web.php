@@ -49,3 +49,7 @@ Route::post('messages', ['uses' => 'MessagesController@store']);
 
 //Profile
 Route::get('profile',['uses' => 'ProductsController@showprofile']);
+//Search
+Route::get('search', ['uses' => 'ProductsController@searchproduct']);
+
+//Route::get('results')

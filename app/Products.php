@@ -20,5 +20,6 @@ class Products extends Model
     public $timestamps = false;
 
 
+    
     protected $table = 'products'; //replace with table name
 }
