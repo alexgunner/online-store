@@ -22,7 +22,7 @@
 	    </div>
 	    <ul class="nav navbar-nav">
 	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="/list_products">Productos</a></li>
+	      <li><a href="/listprod">Productos</a></li>
 	      <li><a href="#">Mensajes</a></li>
 	      <li><a href="#">Usuarios</a></li>
 	      <li>
