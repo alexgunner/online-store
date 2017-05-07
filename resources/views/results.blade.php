@@ -14,7 +14,7 @@
 		@endforeach
 	</ul>
 </div>
-	{{ $products->links() }}
+	{{ $products->appends(['title' => Request::input('title')])->links() }}
  
 </body>
 </html>

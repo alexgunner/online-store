@@ -115,8 +115,11 @@ class ProductsController extends Controller
       //}
       $products = Products::where('title', 'LIKE','%'.$search.'%')->paginate(4);
       //$flag=1;
-
-      return view('results',compact('products','p'));
-
+      if(empty($search)){
+          return view('results',['products' => $products]);
+      }
+      else{
+        return view('results',['products' => $products->appends(Input::except('page'))]);
+      }
     }
 }
