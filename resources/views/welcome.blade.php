@@ -65,29 +65,21 @@
                     </div>
 
                     <ul class="header-in">
-                        <li ><a href="/products_template" >  brands</a></li>
-                        <li><a href="404.html">about us</a> </li>
-                        <li><a href="contact.html">   contact us</a></li>
-                        <li ><a href="#" >   how to use</a></li>
+                        <li ><a href="/products_template" > Categorias?</a></li>
+                        <li><a href="404.html">Nosotros</a> </li>
+                        <li><a href="contact.html"> Contactacnos</a></li>
+                        <li ><a href="#" >   Reglas de Uso</a></li>
                     </ul>
                     <div class="search-top">
                         <div class="search">
                             <form  method="GET" action="{{ URL::to('search')}}" enctype="multipart/form-data">
-                                <input type="text" name="search" id="search" value="search about something ?" onfocus="this.value = '';" >
+                                <input type="text" name="search" id="search" placeholder="search about something ?" onfocus="this.value = '';" >
                                 <input type="submit" value="">
                                 
                             </form>
                         </div>
                         <div class="world">
-                            <ul >
-                                <li><a href="#"><span> </span></a> </li>
-                                <li><select class="in-drop">
-                                      <option>EN</option>
-                                      <option>DE</option>
-                                      <option>ES</option>
-                                    </select>
-                                </li>
-                            </ul>
+                           
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -105,144 +97,62 @@
                     </div>
                 <div class="top-nav">
                       <ul class="megamenu skyblue">
-                              <li class="active grid"><a  href="#">fashion</a>
+                              <li class="active grid"><a  href="#">Categoria 1</a>
                                 <div class="megapanel">
                                 <div class="row">
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <ul>
-                                                <li><a href="/products_template">Accessories</a></li>
-                                                <li><a href="/products_template">Bags</a></li>
-                                                <li><a href="/products_template">Caps & Hats</a></li>
-                                                <li><a href="/products_template">Hoodies & Sweatshirts</a></li>
-                                                <li><a href="/products_template">Jackets & Coats</a></li>
-                                                <li><a href="/products_template">Jeans</a></li>
-                                                <li><a href="/products_template">Jewellery</a></li>
-                                                <li><a href="/products_template">Jumpers & Cardigans</a></li>
-                                                <li><a href="/products_template">Leather Jackets</a></li>
-                                                <li><a href="/products_template">Long Sleeve T-Shirts</a></li>
-                                                <li><a href="/products_template">Loungewear</a></li>
-                                            </ul>
+                                           
                                         </div>
                                     </div>
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <ul>
-                                                <li><a href="/products_template">Shirts</a></li>
-                                                <li><a href="/products_template">Shoes, Boots & Trainers</a></li>
-                                                <li><a href="/products_template">Shorts</a></li>
-                                                <li><a href="/products_template">Suits & Blazers</a></li>
-                                                <li><a href="/products_template">Sunglasses</a></li>
-                                                <li><a href="/products_template">Sweatpants</a></li>
-                                                <li><a href="/products_template">Swimwear</a></li>
-                                                <li><a href="/products_template">Trousers & Chinos</a></li>
-                                                <li><a href="/products_template">T-Shirts</a></li>
-                                                <li><a href="/products_template">Underwear & Socks</a></li>
-                                                <li><a href="/products_template">Vests</a></li>
-                                            </ul>
+                                            
                                         </div>
                                     </div>
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <h4>Popular Brands</h4>
-                                            <ul>
-                                                <li><a href="/products_template">Levis</a></li>
-                                                <li><a href="/products_template">Persol</a></li>
-                                                <li><a href="/products_template">Nike</a></li>
-                                                <li><a href="/products_template">Edwin</a></li>
-                                                <li><a href="/products_template">New Balance</a></li>
-                                                <li><a href="/products_template">Jack & Jones</a></li>
-                                                <li><a href="/products_template">Paul Smith</a></li>
-                                                <li><a href="/products_template">Ray-Ban</a></li>
-                                                <li><a href="/products_template">Wood Wood</a></li>
-                                            </ul>
+                                            
+                                            
                                         </div>
                                     </div>
                                   </div>
                                 </div>
                             </li>
-                            <li><a   href="#">furniture & decor</a>
+                            <li><a   href="#">Categoria 2</a>
                              <div class="megapanel">
                                 <div class="row">
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <ul>
-                                                <li><a href="decor.html">Bed</a></li>
-                                                <li><a href="decor.html">Chest</a></li>
-                                                <li><a href="decor.html">Stool & Reider</a></li>
-                                                <li><a href="decor.html">Chair & Carpet</a></li>
-                                                <li><a href="decor.html">Curtain & Brix</a></li>
-                                                <li><a href="decor.html">Shelf</a></li>
-                                                <li><a href="decor.html">Desk</a></li>
-                                                <li><a href="decor.html">Sofa & Anson</a></li>
-                                                <li><a href="decor.html">Bench</a></li>
-                                                <li><a href="decor.html">Sink</a></li>
-                                                <li><a href="decor.html">Lamp</a></li>
-                                            </ul>
+                                           
                                         </div>
                                     </div>
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <ul>
-                                                <li><a href="decor.html">Armchair</a></li>
-                                                <li><a href="decor.html">Reider Bench</a></li>
-                                                <li><a href="decor.html">Carpet & Desk</a></li>
-                                                <li><a href="decor.html">Wardrobe & Lamp</a></li>
-                                                <li><a href="decor.html">Car seat</a></li>
-                                                <li><a href="decor.html">Lounger</a></li>
-                                                <li><a href="decor.html">Anson</a></li>
-                                                <li><a href="decor.html">Karlstad</a></li>
-                                                <li><a href="decor.html">Camilla & Wardrobe</a></li>
-                                                <li><a href="decor.html">Colton</a></li>
-                                                <li><a href="decor.html">Brix</a></li>
-                                            </ul>
+                                           
                                         </div>
                                     </div>
                                     <div class="col1">
-                                    <iframe src="https://player.vimeo.com/video/16878818"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    
                                     </div>
                                   </div>
                                 </div></li>
-                            <li class="grid"><a  href="#">mobiles & tablets</a>
+                            <li class="grid"><a  href="#">Categoria 3</a>
                                <div class="megapanel">
                                 <div class="row">
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <ul>
-                                                <li><a href="mobile.html">Lenovo Tablets</a></li>
-                                                <li><a href="mobile.html">Motorola</a></li>
-                                                <li><a href="mobile.html">Samsung </a></li>
-                                                <li><a href="mobile.html">Htc Tab</a></li>
-                                                <li><a href="mobile.html">Dell & Compaq</a></li>
-                                                <li><a href="mobile.html">Asus Tablets</a></li>
-                                                <li><a href="mobile.html">Microsoft</a></li>
-                                                <li><a href="mobile.html">Moto E & Moto G</a></li>
-                                                <li><a href="mobile.html">Intex</a></li>
-                                                <li><a href="mobile.html">Hauwei Lumia</a></li>
-                                                <li><a href="mobile.html">Loungewear</a></li>
-                                            </ul>
+                                            
                                         </div>
                                     </div>
                                     <div class="col1">
                                         <div class="h_nav">
-                                            <ul>
-                                                <li><a href="mobile.html">Asus Zenfone 2</a></li>
-                                                <li><a href="mobile.html">Nikon & Sony</a></li>
-                                                <li><a href="mobile.html">Shorts</a></li>
-                                                <li><a href="mobile.html">Olymplus</a></li>
-                                                <li><a href="mobile.html">Sunglasses</a></li>
-                                                <li><a href="mobile.html">Samsung Nx</a></li>
-                                                <li><a href="mobile.html">Printers & Monitors</a></li>
-                                                <li><a href="mobile.html">Routers</a></li>
-                                                <li><a href="mobile.html">Data Cards</a></li>
-                                                <li><a href="mobile.html">Mouse & Keyboard</a></li>
-                                                <li><a href="mobile.html">Ink Cartridges</a></li>
-                                            </ul>
+                                            
                                         </div>
                                     </div>
                                     <div class="col1">
                                         <div class="col1">
-                                        <iframe src="https://player.vimeo.com/video/8118831"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        
                                     </div>
                                     </div>
                                   </div>
@@ -252,62 +162,12 @@
 
                         </li>
                         <li><a  href="/contacto">Contacto</a>
-                          <div class="megapanel">
-                                <div class="row">
-                                    <div class="col1">
-                                        <div class="h_nav">
-                                            <ul>
-                                                <li><a href="mobile.html">Lenovo Tablets</a></li>
-                                                <li><a href="mobile.html">Motorola</a></li>
-                                                <li><a href="mobile.html">Samsung </a></li>
-                                                <li><a href="mobile.html">Htc Tab</a></li>
-                                                <li><a href="mobile.html">Dell & Compaq</a></li>
-                                                <li><a href="mobile.html">Asus Tablets</a></li>
-                                                <li><a href="mobile.html">Microsoft</a></li>
-                                                <li><a href="mobile.html">Moto E & Moto G</a></li>
-                                                <li><a href="mobile.html">Intex</a></li>
-                                                <li><a href="mobile.html">Hauwei Lumia</a></li>
-                                                <li><a href="mobile.html">Loungewear</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col1">
-                                        <div class="h_nav">
-                                            <ul>
-                                                <li><a href="mobile.html">Asus Zenfone 2</a></li>
-                                                <li><a href="mobile.html">Nikon & Sony</a></li>
-                                                <li><a href="mobile.html">Shorts</a></li>
-                                                <li><a href="mobile.html">Olymplus</a></li>
-                                                <li><a href="mobile.html">Sunglasses</a></li>
-                                                <li><a href="mobile.html">Samsung Nx</a></li>
-                                                <li><a href="mobile.html">Printers & Monitors</a></li>
-                                                <li><a href="mobile.html">Routers</a></li>
-                                                <li><a href="mobile.html">Data Cards</a></li>
-                                                <li><a href="mobile.html">Mouse & Keyboard</a></li>
-                                                <li><a href="mobile.html">Ink Cartridges</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col1">
-                                        <div class="col1">
-                                        <iframe src="https://player.vimeo.com/video/8118831"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    </div>
-                                    </div>
-                                  </div>
-                                </div></li>
+                          </li>
 
 
                       </ul>
                         </div>
-                            <div class="cart box_1">
-                                <a href="checkout.html">
-                                <h3> <div class="total">
-                                    <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-                                    <img src="images/cart.png" alt=""/></h3>
-                                </a>
-                                <p><a href="javascript:;" class="simpleCart_empty"><img src="images/cart-c.png"  alt=""></a></p>
-                                <div class="clearfix"> </div>
-                            </div>
+                            
 
                         <div class="clearfix"> </div>
                 </div>
@@ -331,8 +191,8 @@
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
                                         <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
                                     <div class="off">
-                                        <label>35% off !</label>
-                                        <p>White Blended Cotton "still fresh" t-shirt</p>
+                                        <label></label>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <div class="clearfix"> </div>
@@ -348,8 +208,8 @@
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
                                         <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
                                     <div class="off">
-                                        <label>35% off !</label>
-                                        <p>White Blended Cotton "still fresh" t-shirt</p>
+                                        <label></label>
+                                        <p></p>
                                     </div>
                                 </div>
                                 <div class="clearfix"> </div>
@@ -888,26 +748,7 @@
             </div>
             <!---->
 
-                    <div class="content-bottom">
-                        <div class="col-md-8 latter">
-                            <h6>NEWSLETTER</h6>
-                            <p>sign up now to our newsletter discount! to get the Welcome discount</p>
-
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="col-md-4 latter-right">
-
-                                <form>
-                                <div class="join">
-                                    <input type="text" value="your email here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your email here';}">
-                                    <i> </i>
-                                </div>
-                                    <input type="submit" value="join us">
-                                </form>
-
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+                    
 
             <!---->
             <div class="bottom-content">
@@ -931,7 +772,7 @@
                 <div class="container">
                     <div class="col-md-3 footer-left">
                         <a href="/"><img src="images/logo.png" alt=""></a>
-                        <p class="footer-class">© 2015 Markito All Rights Reserved | Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                        <p class="footer-class"> <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
                     </div>
                     <div class="col-md-2 footer-middle">
                         <ul>
@@ -941,27 +782,11 @@
                         </ul>
                     </div>
                     <div class="col-md-4 footer-left-in">
-                        <ul class="term">
-                            <li><a href="#">terms and conditions</a> </li>
-                            <li><a href="#">  markito in the press</a></li>
-                            <li ><a href="#" >  testimonials</a></li>
-                        </ul>
-                        <ul class="term">
-                            <li><a href="#">join us</a> </li>
-                            <li><a href="#">  markito videos</a></li>
-
-                        </ul>
+                    
                         <div class="clearfix"> </div>
                     </div>
                     <div class="col-md-3 footer-right">
-                        <h5>WE SUPPORT</h5>
-                        <ul>
-                            <li><a href="#"><i> </i></a> </li>
-                            <li><a href="#"><i class="we"> </i></a></li>
-                            <li ><a href="#" ><i class="we-in"> </i></a></li>
-                            <li ><a href="#" ><i class="we-at"> </i></a></li>
-                            <li ><a href="#" ><i class="we-at-at"> </i></a></li>
-                        </ul>
+
                     </div>
                     <div class="clearfix"> </div>
                 </div>
