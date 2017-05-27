@@ -73,7 +73,7 @@
                     <div class="search-top">
                         <div class="search">
                             <form  method="GET" action="{{ URL::to('search')}}" enctype="multipart/form-data">
-                                <input type="text" name="search" id="search" value="search about something ?" onfocus="this.value = '';" >
+                                <input type="text" name="search" id="search" placeholder="search about something ?" onfocus="this.value = '';" >
                                 <input type="submit" value="">
                                 
                             </form>
