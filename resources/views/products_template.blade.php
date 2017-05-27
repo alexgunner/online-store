@@ -784,20 +784,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 				<ul class="term">
 					<li><a href="#">join us</a> </li>
-					<li><a href="#">  markito videos</a></li>
+					<li><a href="#">  markito videos</a></li>	
 					
 				</ul>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="col-md-3 footer-right">
-				<h5>WE SUPPORT</h5>
-				<ul>
-					<li><a href="#"><i> </i></a> </li>
-					<li><a href="#"><i class="we"> </i></a></li>
-					<li ><a href="#" ><i class="we-in"> </i></a></li>
-					<li ><a href="#" ><i class="we-at"> </i></a></li>
-					<li ><a href="#" ><i class="we-at-at"> </i></a></li>
-				</ul>
+				
 			</div>
 			<div class="clearfix"> </div>
 		</div>
