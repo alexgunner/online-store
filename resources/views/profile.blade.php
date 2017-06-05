@@ -82,11 +82,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	 <p> </p>
 	 <div class="container">
 		
-		@foreach ($user as $us)
+		 
 
-        	{{ $us->email }}
-        	<img alt="star" src="{{ asset('uploads/' . $us->image) }}" /> 
-		@endforeach
+        	{{ $user->email }}
+        	@foreach ($products as $prod)
+        		<img alt="star" src="{{ asset('uploads/' . $prod->image) }}" /> 
+			@endforeach
         	 
 		
 	 </div>

@@ -92,9 +92,14 @@ class ProductsController extends Controller
         {
           // The user is logged in...
 
-          $user = DB::table('products')->where('email', Auth::user()->email)->get();
+          $user = DB::table('users')->where('email', Auth::user()->email)->first();
+          
+
+          $prodId = DB::table('user_product')->where('user_id',$user->id)->first();
+
+          $products = DB::table('products')->where('id',$prodId->product_id)->get();
         
-          return view('profile',['user' => $user]);
+          return view('profile',['user' => $user],['products' => $products]);
         
         }
         else
