@@ -65,7 +65,7 @@
                     </div>
 
                     <ul class="header-in">
-                        <li ><a href="/products_template" > Categorias?</a></li>
+                        <li ><a href="/products">Crear Producto </a></li>
                         <li><a href="404.html">Nosotros</a> </li>
                         <li><a href="contact.html"> Contactacnos</a></li>
                         <li ><a href="#" >   Reglas de Uso</a></li>
@@ -78,7 +78,34 @@
                                 
                             </form>
                         </div>
-                        <div class="world">
+                        <div>
+                        <ul class="header-in">
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/register') }}">Register</a></li>
+                        @else
+                        <li><a href="#"><span> </span></a> </li>
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                        </li>
+                        @endif
+                    </ul>
                            
                         </div>
                         <div class="clearfix"> </div>
@@ -158,7 +185,7 @@
                                   </div>
                                 </div>
                         </li>
-                                 <li class="grid"><a  href="health.html">health & beauty</a>
+                                 <li class="grid"><a  href="health.html">health beauty</a>
 
                         </li>
                         <li><a  href="/contacto">Contacto</a>
@@ -189,7 +216,7 @@
                                     <img src="images/ba.png" class="img-responsive" alt="">
                                 </div></a>
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
-                                        <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
+                                        <div class="item_add"><span class="item_price" >Ver <i> </i> </span></div>
                                     <div class="off">
                                         <label></label>
                                         <p></p>
@@ -206,7 +233,7 @@
                                     <img src="images/ba2.png" class="img-responsive" alt="">
                                 </div></a>
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
-                                        <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
+                                        <div class="item_add"><span class="item_price" >Ver <i> </i> </span></div>
                                     <div class="off">
                                         <label></label>
                                         <p></p>
@@ -229,7 +256,7 @@
                                     <img src="images/ba11.png" class="img-responsive" alt="">
                                 </div></a>
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
-                                        <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
+                                        <div class="item_add"><span class="item_price" >Ver <i> </i> </span></div>
                                     <div class="off">
                                         <label>35% off !</label>
                                         <p>White Blended Cotton "still fresh" t-shirt</p>
@@ -246,7 +273,7 @@
                                     <img src="images/ba21.png" class="img-responsive" alt="">
                                 </div></a>
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
-                                        <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
+                                        <div class="item_add"><span class="item_price" >Ver <i> </i> </span></div>
                                     <div class="off">
                                         <label>35% off !</label>
                                         <p>White Blended Cotton "still fresh" t-shirt</p>
@@ -269,7 +296,7 @@
                                     <img src="images/ba12.png" class="img-responsive" alt="">
                                 </div></a>
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
-                                        <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
+                                        <div class="item_add"><span class="item_price" >Ver <i> </i> </span></div>
                                     <div class="off">
                                         <label>35% off !</label>
                                         <p>White Blended Cotton "still fresh" t-shirt</p>
@@ -286,7 +313,7 @@
                                     <img src="images/ba22.png" class="img-responsive" alt="">
                                 </div></a>
                                 <div class="cart-at grid_1 simpleCart_shelfItem">
-                                        <div class="item_add"><span class="item_price" >123 $ <i> </i> </span></div>
+                                        <div class="item_add"><span class="item_price" >Ver <i> </i> </span></div>
                                     <div class="off">
                                         <label>35% off !</label>
                                         <p>White Blended Cotton "still fresh" t-shirt</p>
@@ -368,7 +395,7 @@
                            </div>
                             <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -404,7 +431,7 @@
                            </div>
                           <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                             <!---
@@ -444,7 +471,7 @@
                            </div>
                            <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -482,7 +509,7 @@
 
                         <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -519,7 +546,7 @@
                            </div>
                         <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -556,7 +583,7 @@
                            </div>
                         <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -592,7 +619,7 @@
                            </div>
                         <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -628,7 +655,7 @@
                            </div>
                         <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -664,7 +691,7 @@
                            </div>
                         <!---->
                                 <div class="grid_1 simpleCart_shelfItem">
-                                    <a href="#" class="cup item_add"><span class=" item_price" >123 $ <i> </i> </span></a>
+                                    <a href="#" class="cup item_add"><span class=" item_price" >Ver <i> </i> </span></a>
                                 </div>
                             <!---->
                         </div>
@@ -695,7 +722,7 @@
                                     <li><i class="in-star"> </i>  </li>
                                 </ul>
                                 <!---->
-                                <a href="#" class="item_add"><span class="white item_price" >123 $ <i> </i> </span></a>
+                                <a href="#" class="item_add"><span class="white item_price" >Ver <i> </i> </span></a>
                                 <!---->
                             </div>
                             <div class="clearfix"> </div>
@@ -716,7 +743,7 @@
                                     <li><i class="in-star"> </i>  </li>
                                 </ul>
                                 <!---->
-                                <a href="#" class="item_add"><span class="white item_price" >123 $ <i> </i> </span></a>
+                                <a href="#" class="item_add"><span class="white item_price" >Ver <i> </i> </span></a>
                                 <!---->
                             </div>
                             <div class="clearfix"> </div>
@@ -737,7 +764,7 @@
                                     <li><i class="in-star"> </i>  </li>
                                 </ul>
                                 <!---->
-                                <a href="#" class="item_add"><span class="white item_price" >123 $ <i> </i> </span></a>
+                                <a href="#" class="item_add"><span class="white item_price" >Ver<i> </i> </span></a>
                                 <!---->
                             </div>
                             <div class="clearfix"> </div>
@@ -771,15 +798,11 @@
             <div class="footer">
                 <div class="container">
                     <div class="col-md-3 footer-left">
-                        <a href="/"><img src="images/logo.png" alt=""></a>
-                        <p class="footer-class"> <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                        
                     </div>
                     <div class="col-md-2 footer-middle">
-                        <ul>
-                            <li><a href="404.html">about us</a> </li>
-                            <li><a href="contact.html">   contact us</a></li>
-                            <li ><a href="/products_template" >  our stores</a></li>
-                        </ul>
+                        <a href="/"><img src="images/logo.png" alt=""></a>
+                        <p class="footer-class"> <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
                     </div>
                     <div class="col-md-4 footer-left-in">
                     
