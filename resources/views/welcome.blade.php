@@ -55,20 +55,16 @@
             <div class="top-header" >
                 <div class="container">
                 <div class="top-head" >
-                    <div class="header-para">
-                        <ul class="social-in">
-                            <li><a href="#"><i> </i></a></li>
-                            <li><a href="#"><i class="ic"> </i></a></li>
-                            <li><a href="#"><i class="ic1"> </i></a></li>
-
-                        </ul>
-                    </div>
 
                     <ul class="header-in">
                         <li ><a href="/products">Crear Producto </a></li>
                         <li><a href="404.html">Nosotros</a> </li>
                         <li><a href="contact.html"> Contactacnos</a></li>
                         <li ><a href="#" >   Reglas de Uso</a></li>
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/register') }}">Register</a></li>
+                        @endif
                     </ul>
                     <div class="search-top">
                         <div class="search">
@@ -78,39 +74,9 @@
                                 
                             </form>
                         </div>
-                        <div>
-                        <ul class="header-in">
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                        <li><a href="#"><span> </span></a> </li>
-                        <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                        </li>
-                        @endif
-                    </ul>
-                           
-                        </div>
-                        <div class="clearfix"> </div>
+                        
                     </div>
-                        <div class="clearfix"> </div>
+                        
                 </div>
                 </div>
             </div>
