@@ -24,6 +24,7 @@ class CreateProfileTable extends Migration
             $table->string('description');
             $table->string('location');
             $table->string('image');
+            $table->boolean('active')->default('1');
             $table->rememberToken();
             $table->timestamps();
         });

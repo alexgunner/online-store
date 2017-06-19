@@ -49,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 
 			<ul class="header-in">
-				<li ><a href="/products_template.html" >  brands</a></li>
+				<li ><a href="/products">Crear Producto</a></li>
 				<li><a href="404.html">about us</a> </li>
 				<li><a href="contact.html">   contact us</a></li>
 				<li ><a href="#" >   how to use</a></li>
@@ -61,24 +61,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<input type="submit" value="" >
 					</form>
 				</div>
-				<div class="world">
-					<ul >
-						<li><a href="#"><span> </span></a> </li>
-						<li><select class="in-drop">
-							  <option>EN</option>
-							  <option>DE</option>
-							  <option>ES</option>
-							</select>
-						</li>
+			</div>
+				<div class="header-in">
+					<ul class="clearfix">
+						@if (Auth::guest())
+                            <li><a href="{{ url('/login') }}">Ingresar</a></li> 
+                            <li><a href="{{ url('/register') }}">Registrarse</a></li>
+                        @else
+						<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                        </li>
+                        @endif
 					</ul>
 				</div>
-				<div class="clearfix"> </div>
+				
 			</div>
-				<div class="clearfix"> </div>
+				
 		</div>
 		</div>
 	</div>
-
+    </div>
 	 <p> </p>
 	 <div class="container">
 		
@@ -91,5 +109,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         	 
 		
 	 </div>
+	 <!--footer-->
+            <div class="footer">
+                <div class="container">
+                    <div class="col-md-3 footer-left">
+                        
+                    </div>
+                    <div class="col-md-2 footer-middle">
+                        <a href="/"><img src="images/logo.png" alt=""></a>
+                        <p class="footer-class"> <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                    </div>
+                    <div class="col-md-4 footer-left-in">
+                    
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-3 footer-right">
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <script type="text/javascript">
+                                $(document).ready(function() {
+                                    /*
+                                    var defaults = {
+                                        containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                    };
+                                    */
+
+                                    $().UItoTop({ easingType: 'easeOutQuart' });
+
+                                });
+                            </script>
+                        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+            </div>
 	 </body>
 </html>

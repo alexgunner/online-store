@@ -46,12 +46,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     
                 </ul>           
             </div>  
-            
+
             <ul class="header-in">
-                <li ><a href="/products_template.html" >  brands</a></li>
-                <li><a href="404.html">about us</a> </li>
-                <li><a href="contact.html">   contact us</a></li>
-                <li ><a href="#" >   how to use</a></li>
+                <li ><a href="/products">Crear Producto </a></li>
+                <li><a href="404.html">Nosotros</a> </li>
+                <li><a href="contact.html">Contactanos</a></li>
+                <li ><a href="#" >Reglas de Uso</a></li>
             </ul>
             <div class="search-top">
                 <div class="search">
@@ -61,11 +61,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </form>
                 </div>
             </div>
-                
+            <div >
                     <ul class="header-in">
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li> 
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">Ingresar</a></li> 
+                            <li><a href="{{ url('/register') }}">Registrarse</a></li>
                         @else
                         
                         <li class="dropdown">
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                         @endif
                     </ul>
-                
+             </div>   
             </div>
         </div>
     </div>
@@ -99,5 +99,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+
+    <!--footer-->
+            <div class="footer">
+                <div class="container">
+                    <div class="col-md-3 footer-left">
+                        
+                    </div>
+                    <div class="col-md-2 footer-middle">
+                        <a href="/"><img src="images/logo.png" alt=""></a>
+                        <p class="footer-class"> <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                    </div>
+                    <div class="col-md-4 footer-left-in">
+                    
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-3 footer-right">
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <script type="text/javascript">
+                                $(document).ready(function() {
+                                    /*
+                                    var defaults = {
+                                        containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                    };
+                                    */
+
+                                    $().UItoTop({ easingType: 'easeOutQuart' });
+
+                                });
+                            </script>
+                        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+            </div>
+        @yield('footer')
 </body>
 </html>

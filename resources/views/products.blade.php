@@ -1,11 +1,6 @@
-<html>
-<head>
-  <title>Nuevo Producto</title>
-</head>
-<body>
+@extends('layouts.app')
 
-
-
+@section('content')
 <form method="post" action="{{ URL::to('products')}}" enctype="multipart/form-data">
   
   <!-- <label>Nombre:</label>
@@ -65,7 +60,9 @@
     </ul>
   
 </div>
-  
 </div>
-</body>
-</html>
+  @section('footer')
+  @endsection
+
+ @endsection
+
