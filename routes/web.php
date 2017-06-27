@@ -34,10 +34,18 @@ Route::get('products', function(){
 		return View::make('products');
 });
 
+// Productos
 Route::post('products', ['uses' => 'ProductsController@store']);
 
 Route::get('listprod', ['uses' => 'ProductsController@showlist']);
 
+Route::get('allproducts',['uses' => 'ProductsController@allproducts']);
+
+Route::get('product/{id}',[
+	'uses' => 'ProductsController@productbyid',
+	'as' => 'product'
+]);
+/*****************/
 Route::get('contacto', ['uses' => 'HomeController@contact']);
 
 Route::get('admin', ['uses' => 'HomeController@admin']);

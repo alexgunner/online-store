@@ -127,4 +127,20 @@ class ProductsController extends Controller
         return view('results',['products' => $products->appends(Input::except('page'))]);
       }
     }
+
+    public function allproducts()
+    {
+         $products = DB::table('products')->paginate(2);
+
+
+        return view('allproducts',['products' => $products]);
+    }
+
+    public function productbyid($id)
+    {
+      
+      $product = Products::find($id);
+
+      return view('product', compact("product"));
+    }
 }
