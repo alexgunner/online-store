@@ -37,8 +37,9 @@ class MessagesController extends Controller
     	 Mail::send('emails.contactmsg', $data, function($message1) use ($data){
 
     	 		$message1->from($data['email']);
-    	 		$message1->to(' yuri-12b232@inbox.mailtrap.io');
-    	 		$message1->subject('buy product');
+    	 		//$message1->to(' yuri-12b232@inbox.mailtrap.io');
+    	 		$message1->to('yurialejandro.valverde@gmail.com');
+                $message1->subject('buy product');
     	 });
 
     	 return View('messages', ['message' => $message]);
