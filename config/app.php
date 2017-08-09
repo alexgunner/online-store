@@ -179,6 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         //COUNTER
         Kryptonit3\Counter\CounterServiceProvider::class,
+        //CAPTCHA
+        LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,
 
     ],
 

@@ -24,9 +24,26 @@ class MessagesController extends Controller
     public function store(Request $request)
     {
 
+        $code = $request->input('CaptchaCode');
+        $isHuman = captcha_validate($code);
+
+        /*if ($isHuman) {
+  // TODO: Captcha validation passed:
+  // continue with form processing, knowing the submission was made by a human
+        
+
+
+        } else {
+  // TODO: Captcha validation failed:
+  // abort sensitive action, return an error message
+        
+
+        }*/
     	//$user = session('email');
 
-    	 $message = Messages::create([
+    	
+
+         $message = Messages::create([
                 'message' => $request->msg,
           ]);
 

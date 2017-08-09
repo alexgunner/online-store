@@ -61,3 +61,6 @@ Route::get('profile',['uses' => 'ProductsController@showprofile']);
 Route::get('search', ['uses' => 'ProductsController@searchproduct']);
 
 //Route::get('results')
+
+//recaptcha
+

@@ -2,7 +2,9 @@
 
 @section('content')
 @endsection
-<div>
+<head>
+	<link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
+</head>
 <div class="container">
     		{{ $product->title }}<br/>
     		{{ $product->price }}<br/>
@@ -19,14 +21,16 @@
     	  	<textarea rows="4" cols="40" name="msg" id="msg">
     	  		Escribe tu mensaje aqui...
     	  	</textarea>
+			{!! captcha_image_html('ExampleCaptcha') !!}
+			<input type="text" id="CaptchaCode" name="CaptchaCode">
+			<br/>
     	  	 <input type="submit" value="Send" name="submit">
       		 <input type="hidden" value="{{ csrf_token() }}" name="_token">
       	</form>
 
       	{{ Counter::showAndCount($product->title) }}
     </div>
+
  
- 	
-<div>
 
 

@@ -118,7 +118,7 @@ class ProductsController extends Controller
       //if(empty($search) && $flag == 0){
         //  return redirect('/')->with('message','Ingresa una palabra en tu busqueda');
       //}
-      $products = Products::where('title', 'LIKE','%'.$search.'%')->paginate(4);
+      $products = Products::where('title', 'LIKE','%'.$search.'%')->where('active',1)->paginate(4);
       //$flag=1;
       if(empty($search)){
           return view('results',['products' => $products]);
@@ -130,7 +130,7 @@ class ProductsController extends Controller
 
     public function allproducts()
     {
-         $products = DB::table('products')->paginate(2);
+         $products = DB::table('products')->where('active', 1)->paginate(2);
 
 
         return view('allproducts',['products' => $products]);

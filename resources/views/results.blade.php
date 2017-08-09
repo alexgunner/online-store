@@ -10,6 +10,7 @@
                     {{ $prod->title }}
                     {{  $prod->id}}
                     <img alt="star" src="{{ asset('uploads/' . $prod->image) }}" />
+                    <a href="{{ route('product', $prod->id) }}">Ver Producto</a>
                  </li>  
 		@endforeach
 	</ul>
