@@ -8,7 +8,7 @@ class Products extends Model
 {
     //fields of the table (could add more)
     protected $fillable = [
-      'category',
+      'category_id',
       'title',
       'price',
       'saleby',

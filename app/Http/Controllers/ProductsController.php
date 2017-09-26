@@ -33,7 +33,7 @@ class ProductsController extends Controller
         
         $this->validate(request(), 
         [
-            'category' => 'required|max:40',
+            'category' => 'required',
             'title' => 'required|max:50',
             'saleby' => 'required',
             'price' => 'required|numeric',
@@ -43,7 +43,7 @@ class ProductsController extends Controller
 
         ]);
 
-        //echo "UPLOADED";
+        echo $request->category;
 
        if(Input::hasFile('img')){
           //echo 'asdasd';
@@ -59,7 +59,7 @@ class ProductsController extends Controller
            //echo '<img src="uploads/'. $filename . '"/>';
 
            $product = Products::create([
-                'category' => $request->category,
+                'category_id' => $request->category,
                 'title' => $request->title,
                 'saleby' => $request->saleby,
                 'price' => $request->price,
@@ -68,6 +68,8 @@ class ProductsController extends Controller
                 'image' => $filename,
            ]);
 
+           
+            
            //$prod_id = DB::select('select id from products order by id desc limit 1');
            $prod = DB::table('products')->orderBy('id','desc')->first();
            $user_id = Auth::user()->id;
@@ -142,5 +144,21 @@ class ProductsController extends Controller
       $product = Products::find($id);
 
       return view('product', compact("product"));
+    }
+
+    public function searchbyCategory(Request $request)
+    {
+
+        $search = Input::get('search');
+        $category_id = Input::get('category');
+
+        $products = Products::where('title', 'LIKE','%'.$search.'%')->where('category_id', $category_id)->where('active',1)->paginate(3);
+
+      if(empty($search)){
+          return view('results',['products' => $products]);
+      }
+      else{
+        return view('results',['products' => $products->appends(Input::except('page'))]);
+      }
     }
 }

@@ -10,12 +10,14 @@
   <input id="email" type="email" name="email">
   <br/> -->
   <label>Categoria</label>
-  <select name="category" id="category">
-    <option value="Autos">Volvo</option>
-    <option value="Electronicos">Saab</option>
-    <option value="Ropa">Fiat</option>
-    <option value="Instrumentos Musicales">Audi</option>
-  </select>
+    <select name="category" id="category">
+      <option value="1">Autos</option>
+      <option value="2">Electronicos</option>
+      <option value="3">Casas</option>
+      <option value="4">Muebles</option>
+      <option value="5">Trabajo</option>
+      <option value="6">Servicios</option>
+    </select>
 
   <br/>
 

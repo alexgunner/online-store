@@ -17,7 +17,7 @@ class CreateProfileTable extends Migration
             $table->increments('id');
             //$table->string('name');
             //$table->string('email');
-            $table->string('category');
+            $table->integer('category_id');
             $table->string('title');
             $table->string('saleby');
             $table->string('price');
@@ -27,6 +27,10 @@ class CreateProfileTable extends Migration
             $table->boolean('active')->default('1');
             $table->rememberToken();
             $table->timestamps();
+        });
+
+         Schema::table('products', function($table){
+            $table->foreign('category_id')->references('id')->on('category');
         });
     }
 

@@ -165,8 +165,24 @@
                         <div class="clearfix"> </div>
                 </div>
                 </div>
+                 <div>
+                            <form  method="GET" action="{{ URL::to('searchbyCategory')}}" enctype="multipart/form-data">
+                                <input type="text" name="search" id="search" placeholder="Busca por Categoria" onfocus="this.value = '';" >
+                               <select name="category" id="category">
+                                <option value="1">Autos</option>
+                                <option value="2">Electronicos</option>
+                                <option value="3">Casas</option>
+                                <option value="4">Muebles</option>
+                                <option value="5">Trabajo</option>
+                                <option value="6">Servicios</option>
+                              </select>
+                                <input type="submit" value="Buscar">
+                                
+                            </form>
+                </div>
             </div>
         </div>
+        
         <!--banner-->
 
             <div class="banner">
